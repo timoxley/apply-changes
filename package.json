@@ -1,7 +1,7 @@
 {
   "name": "apply-changes",
   "version": "0.0.1",
-  "description": "Take a changes array in the format produced by `Object.observe` and `Array.observe`, and apply those changes to another object.",
+  "description": "Apply Array/Object.observe format changesets to an object.",
   "main": "index.js",
   "scripts": {
     "test": "node --harmony test/index.js"
