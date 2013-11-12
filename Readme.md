@@ -2,6 +2,9 @@
 
 Take a changes array in the format produced by `Object.observe` and `Array.observe`, and apply those changes to another object.
 
+There's many 'changeset' formats floating around, might as well conform
+to a format built into JavaScript itself.
+
 ### Example
 
 ```js
@@ -38,7 +41,7 @@ changes applied in the other environment.
 
 ## Caveats
 
-** The recipient of the changes must be treated as read-only. **
+**The recipient of the changes must be treated as read-only.**
 `apply-changes` does not verify the state of recieving object matches the state
 of source object. Updates are likely to corrupt data if you change the recipient
 object.
