@@ -1,0 +1,26 @@
+{
+  "name": "apply-changes",
+  "version": "0.0.1",
+  "description": "Take a changes array in the format produced by `Object.observe` and `Array.observe`, and apply those changes to another object.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --harmony test/index.js"
+  },
+  "author": "Tim Oxley",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "~2.1.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "tape": "~2.1.0"
+  },
+  "keywords": [
+    "observe",
+    "changeset",
+    "changes",
+    "replication"
+  ]
+}
