@@ -1,5 +1,7 @@
 "use strict"
 
+/** @todo add comments **/
+
 module.exports = function(target, changes) {
   changes.forEach(function(change) {
     var method = module.exports[change.type]
