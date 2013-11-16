@@ -1,6 +1,6 @@
 "use strict"
 
-/** @todo add comments **/
+/** @todo: add comments **/
 
 module.exports = function(target, changes) {
   changes.forEach(function(change) {
