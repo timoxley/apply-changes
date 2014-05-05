@@ -15,23 +15,14 @@ module.exports.updated = function updated(change, target, map) {
 
 module.exports['new'] = module.exports.updated
 
-module.exports.deleted = function deleted(change, target, map) {
+module.exports.deleted = function deleted(change, target) {
   delete target[change.name]
 }
 
-module.exports.splice = function splice(change, target, map) {
+module.exports.splice = function splice(change, target) {
   var source = change.object
   var addedItems = source.slice(change.index, change.index + change.addedCount)
   var spliceArgs = [change.index, change.removed.length].concat(addedItems)
-  spliceArgs = _mapSpliceArgs.apply([target].concat(spliceArgs))
   target.splice.apply(target, spliceArgs)
-}
-
-
-function _mapSpliceArgs(target, changeIndex, changeLen) {
-  var args = Array.prototype.slice.call(arguments, 3)
-  return args.map(function(splice, ind) {
-    return map(splice, target[changeIndex + ind])
-  })
 }
 
