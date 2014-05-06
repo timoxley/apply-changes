@@ -8,13 +8,13 @@ module.exports = function(target, changes) {
   })
 }
 
-module.exports.updated = function updated(change, target) {
+module.exports.updated = module.exports.update = function updated(change, target) {
   target[change.name] = change.object[change.name]
 }
 
-module.exports['new'] = module.exports.updated
+module.exports['new'] = module.exports.add = module.exports.updated
 
-module.exports.deleted = function deleted(change, target) {
+module.exports.deleted = module.exports['delete'] = function deleted(change, target) {
   delete target[change.name]
 }
 
